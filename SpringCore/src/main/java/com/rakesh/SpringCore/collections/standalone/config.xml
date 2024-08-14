@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util
+  http://www.springframework.org/schema/util/spring-util.xsd">
+  
+  	<!-- Standalone List -->
+  	
+  	<util:list list-class="java.util.LinkedList" id="courses">
+  		<value>Java core</value>
+  		<value>Spring Framework</value>
+  		<value>React</value>
+  		<value>DevOps</value>
+  		<value>Data Science</value>
+  	</util:list>
+  	
+  	<!-- Standalone Map -->
+  	
+  	<util:map map-class="java.util.TreeMap" id="fees">
+  		<entry key="Java core" value="2000"/>
+  		<entry key="Spring Framwork" value="9999"/>
+  		<entry key="React" value="4999"/>
+  		<entry key="DevOps" value="3999"/>
+  		<entry key="Data Science" value="4999"/>
+  	</util:map>
+  	
+  	<!-- Standalone Properties -->
+  	
+  	<util:properties id="dbconfig">
+  		<prop key="driver">com.mysql.jdbc.Driver</prop>
+  		<prop key="url">jdbc:mysql://173.43.32.21:3330/data</prop>
+  		<prop key="username">MySql</prop>
+  		<prop key="password">Ins12321@</prop>
+  	</util:properties>
+  	
+  	<bean class="com.rakesh.SpringCore.collections.standalone.Institute" id="institute">
+  		<property name="courses" ref="courses"/>
+  		<property name="feeStructure" ref="fees"/>
+  		<property name="props" ref="dbconfig"/>
+  	</bean>
+  	
+ </beans>

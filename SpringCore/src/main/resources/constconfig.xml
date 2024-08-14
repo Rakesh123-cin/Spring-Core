@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+	<bean class="com.rakesh.SpringCore.constructor.Information" id="info">
+		<constructor-arg value="Rakesh Anand" index="0"/>
+		<constructor-arg value="9122077694" index="1"/>
+		<constructor-arg value="Bangalore" index="2"/>
+	</bean>
+	
+	<bean class="com.rakesh.SpringCore.constructor.Employee" id="emp">
+		<constructor-arg value="101" index="0"/>
+		<constructor-arg ref="info" index="1"/>
+		<constructor-arg index="2">
+			<list>
+				<value>Java core</value>
+				<value>Sql</value>
+				<value>Hibernate</value>
+				<value>Spring Boot</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.rakesh.SpringCore.constructor.Addition" id="add">
+		<constructor-arg value="57" type="double"/>
+		<constructor-arg value="42" type="double"/>
+	</bean>
+ </beans>

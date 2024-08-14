@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <bean class="som.rakesh.SpringCore.collections.Employee" id="emp1">
+  		<property name="name" value="Ayan"/>
+  		<property name="phones">
+  			<list>
+  				<value>9122077672</value>
+  				<value>8745210854</value>
+  				<value>7209921687</value>
+  			</list>
+  		</property>
+  		<property name="addresses">
+  			<set>
+  				<value>Delhi</value>
+  				<value>Bangalore</value>
+  			</set>
+  		</property>
+  		<property name="courses">
+  			<map>
+  				<entry key="Java" value="2 months"/>
+  				<entry key="Spring Boot" value="4 months" />
+  			</map>
+  		</property>
+  </bean>
+  
+ </beans>

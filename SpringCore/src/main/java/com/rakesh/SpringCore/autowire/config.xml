@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  	<bean id="address" class="com.rakesh.SpringCore.autowire.Address" >
+  		<property name="state" value="Bihar"/>
+  		<property name="district" value="Darbhanga"/>
+  	</bean>
+  	
+  	<bean id="address2" class="com.rakesh.SpringCore.autowire.Address" primary="true">
+  		<property name="state" value="Karnataka"/>
+  		<property name="district" value="Bangalore"/>
+  	</bean>
+  	
+  	<bean id="emp" class="com.rakesh.SpringCore.autowire.Employee" autowire="byName">
+  		<property name="id" value="101"/>
+  	</bean>
+  	
+  	<!--<bean id="emp" class="com.rakesh.SpringCore.autowire.Employee" autowire="byType">
+  		<property name="id" value="101"/>
+  	</bean>-->
+  	
+  	<!--<bean id="emp" class="com.rakesh.SpringCore.autowire.Employee" autowire="constructor">
+  		<property name="id" value="101"/>
+  	</bean>-->
+ </beans>
